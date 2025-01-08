@@ -1,0 +1,51 @@
+<div><app-header></app-header></div>
+
+
+
+<!-- {{n1}} -->
+
+    <!-- <div class="container-fluid">
+        <div class="row">
+            <ng-container >
+                <div class="card col-md-3">
+                    <img src="{{product_image}}" alt="" style="width: 120px;height: 120px;">
+                    <h5 style="white-space: nowrap;overflow: hidden;text-overflow: ellipsis;max-width: 100ch;">{{product_item}}</h5>
+                    <p style="white-space: nowrap;overflow: hidden;text-overflow: ellipsis;max-width: 100ch;">{{product_des}}</p>
+                    <p><strong>Price:</strong> ${{product_price}}</p>
+                </div>
+            </ng-container>
+    
+        </div>
+    </div> -->
+    <ng-container >
+        <div class="container">
+            <div class="card-table">
+                <div class="cart-product">
+                    <table class="table table-responsive">
+                        <thead>
+                            <tr>
+                                
+                                <th>Product Name</th>
+                                <th>Product Image</th>
+                                <th>Description</th>
+                                <th>Price</th>
+                                
+                                
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                               
+                                <td>{{product_item}}</td>
+                                <td><img style="width: 120px;" src="{{product_image}}" alt=""></td>
+                                <td style="width: 25%;">{{product_des}}</td>
+                                <td style="width: 12%;">{{product_price}}</td>
+                            </tr>
+                          
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </ng-container>
+

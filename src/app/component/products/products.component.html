@@ -1,0 +1,105 @@
+<div><app-header></app-header></div>
+<div class="card-top container-fluid">
+    <div class="container d-flex">
+        <div class="item">
+            <a (click)="filter('')">
+                <img src="https://rukminim1.flixcart.com/flap/128/128/image/f15c02bfeb02d15d.png?q=100" alt="">
+                <h6>All products</h6>
+            </a>
+        </div>
+        <div class="item">
+            <a (click)="filter('Laptops')">
+                <img src="https://rukminim1.flixcart.com/flap/128/128/image/69c6589653afdb9a.png?q=100" alt="">
+                <h6>Laptop</h6>
+            </a>
+        </div>
+        <div class="item">
+            <a (click)="filter('Mobiles')">
+                <img src="https://rukminim1.flixcart.com/flap/128/128/image/3450e4be3b9d6d3b.jpg?q=100" alt="">
+                <h6>Mobile</h6>
+            </a>
+        </div>
+        <div class="item">
+            <a (click)="filter('Headset')">
+                <img style="width: 62px; margin-top: 5px;" src="https://cdn.vox-cdn.com/thumbor/rtG9j5GW0lZZ4TfsqosugdjU1XQ=/1400x1050/filters:format(jpeg)/cdn.vox-cdn.com/uploads/chorus_asset/file/22852384/pulse3dmidnightblack.jpg" alt="">
+                <h6>Headset</h6>
+            </a>
+        </div>
+        <div class="item">
+            <a (click)="filter('fridge')">
+                <img style="width: 62px; margin-top: 5px;" src="https://tse4.mm.bing.net/th?id=OIP.lUs6eXzEfL_A5sn22p0DpAHaHa&pid=Api&P=0&w=300&h=300" alt="">
+                <h6>Refrigerater</h6>
+            </a>
+        </div>
+        <div class="item">
+            <a (click)="filter('ac')">
+                <img style="width: 62px; margin-top: 5px;" src="https://tse4.mm.bing.net/th?id=OIP.bZh4nxvRe7HCkmXJ6P2E9wHaDt&pid=Api&P=0&w=351&h=176" alt="">
+                <h6>AC</h6>
+            </a>
+        </div>
+        <div class="item">
+            <a (click)="filter('tv')">
+                <img style="width: 62px; margin-top: 5px;" src="https://tse2.mm.bing.net/th?id=OIP.m56RF1I6RuuaKZZhU6mwygHaEJ&pid=Api&P=0&w=281&h=159" alt="">
+                <h6>TV</h6>
+            </a>
+        </div>
+        <div class="item">
+            <a (click)="filter('airpods')">
+                <img style="width: 62px; margin-top: 5px;" src="https://nekkoo.com/wp-content/uploads/2019/05/airpod-case-6.jpg" alt="">
+                <h6>Airpods</h6>
+            </a>
+        </div>
+        <div class="item">
+            <a (click)="filter('w.machine')">
+                <img style="width: 62px; margin-top: 5px;" src="https://www.electrocity.ie/wp-content/uploads/2018/11/products-5a1ee387a736d7.71172743__42353.1513963089.1280.1280.jpg" alt="">
+                <h6>Washing Machine</h6>
+            </a>
+        </div>
+    </div>
+</div>
+
+<div class="container">
+    <div class="row">
+        <ng-container *ngFor="let item of filterCategory | filter:searchKey:'title'">
+            <div class="card col-md-3">
+                <img src="{{item.image}}" alt="" (click)="rizwan(item)">
+                <h5 style="white-space: nowrap;overflow: hidden;text-overflow: ellipsis;max-width: 100ch;">{{item.title}}</h5>
+                <p style="white-space: nowrap;overflow: hidden;text-overflow: ellipsis;max-width: 100ch;">{{item.description}}</p>
+                <p><strong>Price:</strong> ${{item.price}}</p>
+                <button class="btn" (click)=addtocart(item)>Add to cart</button>
+            </div>
+        </ng-container>
+
+    </div>
+</div>
+<div class="footer">
+    <div class="container">
+    <div class="row">
+    <div class="footer-col-1">
+    <h3>Download our app</h3>
+    <p>Download app for android<br> and ios mobile</p>
+    <div class="app-logo">
+    <img src="https://www.gpstrackingjournal.com/wp-content/uploads/2017/05/app-store-google-play.png">
+    </div>
+    
+    </div>
+    <div class="footer-col-2">
+       
+    <img src="https://www.krazyinlove.com/wp-content/uploads/2016/01/You-And-Me-Forever-pol9094.png">
+    <br>
+    <P>~ Developed by Team Soul </P>
+    
+    </div>
+    
+    <div class="footer-col-3">
+    <h3>INFO</h3>
+    <ul><li><i class="fab fa-facebook-f"></i><a href="https://www.facebook.com/"> facebook</a></li>
+    <li><li><i class="fab fa-twitter"></i><a href="https://www.twitter.com/"> twitter</a></li>
+    <li><li><i class="fab fa-instagram"></i><a href="https://www.instagram.com/"> instagram</a></li>
+    <li><li><i class="fab fa-youtube"></i><a href="https://www.youtube.com/"> youtube</a></li></ul>
+    </div>
+    </div>
+    <hr>
+    <p class="copyright">Copyright © 2021 - Teamsoul.com</p>
+    </div>
+    </div>
